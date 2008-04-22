@@ -1,7 +1,7 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
 Version:	0.20.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Video
 License:	GPLv3
 URL:		http://home.gna.org/subtitleeditor/
@@ -19,6 +19,7 @@ BuildRequires:	desktop-file-utils
 Requires:	iso-codes
 Requires:	gstreamer0.10-plugins-base
 Requires:	gstreamer0.10-plugins-good
+Requires:	gstreamer0.10-ffmpeg
 Requires:	mplayer
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
