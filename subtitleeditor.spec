@@ -73,4 +73,5 @@ rm -rf %{buildroot}
 %{_bindir}/subtitleeditor
 %{_datadir}/applications/subtitleeditor.desktop
 %{_datadir}/subtitleeditor
+%{_mandir}/man1/*.1.*
 %{_iconsdir}/hicolor/*/apps/*
