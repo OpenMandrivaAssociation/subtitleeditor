@@ -14,6 +14,7 @@ BuildRequires:	libgstreamer0.10-plugins-base-devel
 BuildRequires:	gstreamer0.10-plugins-good
 BuildRequires:	pcre-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	desktop-file-utils
 Requires:	iso-codes
