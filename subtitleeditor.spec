@@ -1,11 +1,11 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
-Version:	0.24.0
+Version:	0.24.1
 Release:	%mkrel 1
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
-Source:		http://download.gna.org/subtitleeditor/0.23/%{name}-%{version}.tar.bz2
+Source:		http://download.gna.org/subtitleeditor/0.24/%{name}-%{version}.tar.bz2
 BuildRequires:	libglademm-devel
 BuildRequires:	cppunit-devel
 BuildRequires:	libxml++-devel
