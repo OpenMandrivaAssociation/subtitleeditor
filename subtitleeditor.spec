@@ -1,11 +1,11 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
-Version:	0.24.1
+Version:	0.25.0
 Release:	%mkrel 1
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
-Source:		http://download.gna.org/subtitleeditor/0.24/%{name}-%{version}.tar.bz2
+Source:		http://download.gna.org/subtitleeditor/0.25/%{name}-%{version}.tar.gz
 BuildRequires:	libglademm-devel
 BuildRequires:	cppunit-devel
 BuildRequires:	libxml++-devel
@@ -16,7 +16,6 @@ BuildRequires:	pcre-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	intltool
 BuildRequires:	iso-codes
-BuildRequires:	desktop-file-utils
 Requires:	iso-codes
 Requires:	gstreamer0.10-plugins-base
 Requires:	gstreamer0.10-plugins-good
@@ -35,21 +34,14 @@ easier to synchronise subtitles to voices.
 %setup -q
 
 %build
-./autogen.sh
-
+NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--enable-unittest
-
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-desktop-file-install \
-	--remove-category="GNOME" \
-	--remove-category="Application" \
-	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %find_lang %{name}
 
