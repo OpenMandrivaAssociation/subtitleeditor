@@ -48,7 +48,7 @@ rm -rf %{buildroot}
 %find_lang %{name}
 
 # we don't ship devel files for now
-rm -f %buildroot%_libdir/{*.la,*.so}
+rm -f %buildroot%_libdir/{*.a,*.la,*.so}
 rm -f %buildroot%_libdir/%name/plugins/*/*.la
 
 %if %mdkversion < 200900
