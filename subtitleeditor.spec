@@ -1,11 +1,12 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
-Version:	0.26.0
+Version:	0.30.0
 Release:	%mkrel 1
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
-Source:		http://download.gna.org/subtitleeditor/0.25/%{name}-%{version}.tar.gz
+Source:		http://download.gna.org/subtitleeditor/0.30/%{name}-%{version}.tar.gz
+Patch0:		subtitleeditor-0.30.0-fix-linkage.patch
 BuildRequires:	libglademm-devel
 BuildRequires:	cppunit-devel
 BuildRequires:	libxml++-devel
@@ -32,18 +33,22 @@ easier to synchronise subtitles to voices.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 NOCONFIGURE=yes ./autogen.sh
-%configure2_5x \
-	--enable-unittest
-%make
+%configure2_5x --disable-static
+%make LIBTOOL=%_bindir/libtool
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+%makeinstall_std LIBTOOL=%_bindir/libtool
 
 %find_lang %{name}
+
+# we don't ship devel files for now
+rm -f %buildroot%_libdir/{*.la,*.so}
+rm -f %buildroot%_libdir/%name/plugins/*/*.la
 
 %if %mdkversion < 200900
 %post
@@ -64,6 +69,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README TODO
 %{_bindir}/subtitleeditor
+%{_libdir}/*.so.*
+%{_libdir}/%name
 %{_datadir}/applications/subtitleeditor.desktop
 %{_datadir}/subtitleeditor
 %{_mandir}/man1/*.1.*
