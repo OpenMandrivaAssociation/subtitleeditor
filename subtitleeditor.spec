@@ -76,3 +76,4 @@ rm -rf %{buildroot}
 %{_datadir}/subtitleeditor
 %{_mandir}/man1/*.1.*
 %{_iconsdir}/hicolor/*/apps/*
+%{_datadir}/pixmaps/subtitleeditor.svg
