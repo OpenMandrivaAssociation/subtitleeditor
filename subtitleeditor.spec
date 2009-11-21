@@ -1,3 +1,5 @@
+%define url_ver %(echo %{version} | cut -c 1-4)
+
 Summary:	Subtitle editor
 Name:		subtitleeditor
 Version:	0.33.0
@@ -5,7 +7,7 @@ Release:	%mkrel 1
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
-Source:		http://download.gna.org/subtitleeditor/0.33/%{name}-%{version}.tar.gz
+Source:		http://download.gna.org/subtitleeditor/%{url_ver}/%{name}-%{version}.tar.gz
 Patch0:		subtitleeditor-0.30.0-fix-linkage.patch
 BuildRequires:	libglademm-devel
 BuildRequires:	cppunit-devel
