@@ -20,6 +20,7 @@ BuildRequires:	libxml2-devel
 BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	libtool
+BuildRequires:	libgstreamermm-devel
 Requires:	iso-codes
 Requires:	gstreamer0.10-plugins-base
 Requires:	gstreamer0.10-plugins-good
