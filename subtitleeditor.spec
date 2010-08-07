@@ -2,7 +2,7 @@
 
 Summary:	Subtitle editor
 Name:		subtitleeditor
-Version:	0.36.2
+Version:	0.37.1
 Release:	%mkrel 1
 Group:		Video
 License:	GPLv3+
