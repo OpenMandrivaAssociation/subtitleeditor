@@ -2,8 +2,8 @@
 
 Summary:	Subtitle editor
 Name:		subtitleeditor
-Version:	0.37.1
-Release:	%mkrel 1
+Version:	0.40.0
+Release:	1
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
@@ -26,7 +26,6 @@ Requires:	gstreamer0.10-plugins-base
 Requires:	gstreamer0.10-plugins-good
 Requires:	gstreamer0.10-ffmpeg
 Requires:	mplayer
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Subtitle Editor is a GTK+2 tool to edit subtitles.
@@ -45,36 +44,19 @@ easier to synchronise subtitles to voices.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%find_lang %{name}
+%find_lang %{name} %{name}.lang
 
 # we don't ship devel files for now
 rm -f %buildroot%_libdir/{*.a,*.la,*.so}
 rm -f %buildroot%_libdir/%name/plugins/*/*.la
 
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%clean_icon_cache hicolor
-%endif
-
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README TODO
 %{_bindir}/subtitleeditor
 %{_libdir}/*.so.*
-%{_libdir}/%name
+%{_libdir}/%{name}
 %{_datadir}/applications/subtitleeditor.desktop
 %{_datadir}/subtitleeditor
 %{_mandir}/man1/*.1.*
