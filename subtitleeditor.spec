@@ -3,7 +3,7 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
 Version:	0.40.0
-Release:	%mkrel 1
+Release:	2
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
@@ -13,7 +13,7 @@ BuildRequires:	libglademm-devel
 BuildRequires:	cppunit-devel
 BuildRequires:	pkgconfig(libxml++-2.6)
 BuildRequires:	enchant-devel
-BuildRequires:	libgstreamer0.10-plugins-base-devel
+BuildRequires:	pkgconfig(gstreamer-plugins-base-0.10)
 BuildRequires:	gstreamer0.10-plugins-good
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(libxml-2.0)
