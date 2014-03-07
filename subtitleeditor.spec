@@ -8,6 +8,7 @@ Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
 Source0:	http://download.gna.org/subtitleeditor/%{url_ver}/%{name}-%{version}.tar.gz
+Source1:	subtitleeditor.rpmlintrc
 Patch0:		subtitleeditor-0.40.0-glib-2.31.patch
 BuildRequires:	pkgconfig(libglademm-2.4)
 BuildRequires:	cppunit-devel
