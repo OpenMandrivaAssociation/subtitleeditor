@@ -3,7 +3,7 @@
 Summary:	Subtitle editor
 Name:		subtitleeditor
 Version:	0.40.0
-Release:	2
+Release:	3
 Group:		Video
 License:	GPLv3+
 URL:		http://home.gna.org/subtitleeditor/
