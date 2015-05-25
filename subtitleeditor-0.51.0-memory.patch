@@ -1,0 +1,10 @@
+--- subtitleeditor-0.51.0/plugins/actions/timingfromplayer/timingfromplayer.cc.orig	2015-05-25 09:42:33.720193445 +0100
++++ subtitleeditor-0.51.0/plugins/actions/timingfromplayer/timingfromplayer.cc	2015-05-25 09:42:39.416193081 +0100
+@@ -27,6 +27,7 @@
+ #include <utility.h>
+ #include <gtkmm_utility.h>
+ #include <widget_config_utility.h>
++#include <memory>
+ 
+ /*
+  */

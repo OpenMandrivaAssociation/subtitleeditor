@@ -1,3 +1,5 @@
-sources:
-  "subtitleeditor-0.37.1.tar.gz": 36b839942c52a67f14bbb1fd5d698db2645543ca
+removed_sources:
+  subtitleeditor-0.37.1.tar.gz: 36b839942c52a67f14bbb1fd5d698db2645543ca
   subtitleeditor-0.40.0.tar.gz: e905373ab7ec5076c3c548b0d445e7520f0aec8b
+sources:
+  subtitleeditor-0.51.0.tar.gz: 4c9ac85a1b098af3e56fb62face4fc16eccb4fe6

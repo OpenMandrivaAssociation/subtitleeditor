@@ -1,0 +1,12 @@
+--- subtitleeditor-0.51.0/src/gui/dialogfilechooser.cc.orig	2015-05-25 09:32:40.600231373 +0100
++++ subtitleeditor-0.51.0/src/gui/dialogfilechooser.cc	2015-05-25 09:38:18.833209744 +0100
+@@ -353,8 +353,7 @@
+  */
+ void DialogSaveDocument::on_combo_format_changed()
+ {
+-	Glib::ustring basename = get_current_name();
+-
++	Glib::ustring basename;
+ 	if(basename.empty())
+ 		return;
+ 
