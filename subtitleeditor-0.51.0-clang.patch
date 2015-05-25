@@ -1,0 +1,22 @@
+--- subtitleeditor-0.51.0/src/document.h.orig	2015-05-25 18:20:22.944030574 +0100
++++ subtitleeditor-0.51.0/src/document.h	2015-05-25 18:20:35.046029800 +0100
+@@ -65,7 +65,7 @@
+ 	/*
+ 	 * Constructor by copy
+ 	 */
+-	Document(Document &copy, bool copy_subtitles );
++	Document(Document &copy, bool copy_subtitles = true);
+ 
+ 	/*
+ 	 * Destructor
+--- subtitleeditor-0.51.0/src/document.cc.orig	2015-05-25 18:19:57.911032175 +0100
++++ subtitleeditor-0.51.0/src/document.cc	2015-05-25 18:23:11.873019772 +0100
+@@ -78,7 +78,7 @@
+ /*
+  * Constructor by copy
+  */
+-Document::Document(Document &src, bool copy_subtitles = true )
++Document::Document(Document &src, bool copy_subtitles )
+ :CommandSystem(*this), m_subtitles(*this), m_styles(*this), m_subtitleView(NULL)
+ {
+ 	m_timing_mode = src.m_timing_mode;

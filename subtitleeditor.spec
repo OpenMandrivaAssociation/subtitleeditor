@@ -1,5 +1,6 @@
 %define url_ver %(echo %{version} | cut -c 1-4)
 %define Werror_cflags %{nil}
+%define _disable_ld_no_undefined 1
 
 Summary:	Subtitle editor
 Name:		subtitleeditor
@@ -14,6 +15,7 @@ Source1:	subtitleeditor.rpmlintrc
 Patch1:		subtitleeditor-0.51.0-gtkmm-3.8.patch
 %endif
 Patch2:		subtitleeditor-0.51.0-memory.patch
+Patch3:		subtitleeditor-0.51.0-clang.patch
 BuildRequires:	pkgconfig(gtkmm-3.0)
 BuildRequires:	cppunit-devel
 BuildRequires:	pkgconfig(libxml++-2.6)
