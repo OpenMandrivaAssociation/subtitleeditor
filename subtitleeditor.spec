@@ -8,7 +8,7 @@ Version:	0.51.0
 Release:	1
 Group:		Video
 License:	GPLv3+
-URL:		http://home.gna.org/subtitleeditor/
+URL:		https://home.gna.org/subtitleeditor/
 Source0:	http://download.gna.org/subtitleeditor/%{url_ver}/%{name}-%{version}.tar.gz
 Source1:	subtitleeditor.rpmlintrc
 %if %mdvver < 201500
